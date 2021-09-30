@@ -1,4 +1,5 @@
-from Funciones import probabilidad_simple
+from Probabilidad import probabilidad_simple
+import Estadistica
 
 class Calculadora:
     def __init__(self):
@@ -8,10 +9,9 @@ class Calculadora:
         print() #Crea un espacio en blanco
         menu= [
             ['Seleccione el calculo'],
+            ['1. Estadistica'],
+            ['3. Medidas de tendencia central'],
             ['1. Probabilidad Simple'],
-            ['2. Lista de contactos'],
-            ['3. Buscar contacto'],
-            ['4. Editar contacto'],
             ['5. Salir'] 
             ]
         
@@ -19,12 +19,13 @@ class Calculadora:
             print(menu[x][0])
 
         opcion = int(input("Introduzca la opción deseada: "))
+    
         if opcion == 1:
-            self.probabilidad_simple()
-            x=input("")
+            pass
         elif opcion == 2:
             pass
         elif opcion == 3:
+            self.probabilidad_simple()
             pass
         elif opcion == 4:
             pass
@@ -33,12 +34,6 @@ class Calculadora:
             exit()
         # Volvemos a llamar al menú
         self.menu()
-        
-    def probabilidad_simple(self):
-        probabilidad_simple()
-    
-
-
 
 
 calculadora = Calculadora() 
